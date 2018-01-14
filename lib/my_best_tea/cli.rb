@@ -1,24 +1,3 @@
-# my_best_tea
-#
-# list types of tea
-#
-# What type of tea would you like to learn about?
-#
-# user selects tea type
-#
-# puts information about the tea type
-#
-# Would you like to learn more about this tea?
-#
-# user types y/n
-#
-# If yes...prints information about sub-tea types
-#
-# If no...
-#
-# What type of tea would you like to learn more about?
-
-
 class CLI
 
   def call
@@ -26,11 +5,14 @@ class CLI
     start
   end
 
-  def tea_list
-    puts "list of teas"
+  def list_tea
+    @@all.Tea do each |tea|
+      puts tea.name
+    end
   end
 
   def print_tea(tea)
+    find_by_name(tea)
     puts "more information about tea"
   end
 
@@ -40,8 +22,8 @@ class CLI
 
   def start
     input = nil
+    list_tea
     while input != "exit"
-      tea_list
       puts "Please choose a tea to explore. Type exit to leave the program"
       input = gets.strip
       print_tea(input)
@@ -51,6 +33,7 @@ class CLI
       input = gets.strip
       if input == "y"
         tea_types(input)
+        puts "Would you like to learn more about a new type of tea?"
       elsif input == "n"
         start
       elsif input == "exit"

@@ -1,3 +1,25 @@
+# my_best_tea
+
+list types of tea
+Tea Attributes--
+:name
+:description
+:preparation
+:sub-types
+
+Sub-types
+:description
+
+
+
+What type of tea would you like to learn about?
+user selects tea type puts information about the tea type Would you like to learn more about this tea?
+user types y/n
+If yes...prints information about sub-tea types
+If no...
+What type of tea would you like to learn more about?
+
+
 # MyBestTea
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/myBestTea`. To experiment with that code, run `bin/console` for an interactive prompt.
