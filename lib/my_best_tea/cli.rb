@@ -36,10 +36,13 @@ class CLI
       input = gets.strip.downcase
       case input
         when "tea 1"
+          puts ""
           puts "more information about tea 1"
         when "tea 2"
+          puts ""
           puts "more information on tea 2"
         when "tea 3"
+          puts ""
           puts "more information on tea 3"
       end
     end

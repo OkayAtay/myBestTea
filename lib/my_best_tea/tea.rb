@@ -1,16 +1,19 @@
+require 'irb'
+require 'pry'
+require 'open-uri'
+require 'net/http'
+
 class Tea
 
 attr_accessor :name, :description, :preparation, :subtypes
 @@all = []
 
   def initialize(name)
+    binding.pry
     @name = name
     @@all << self
   end
 
-  def find_by_name
-
-  end
 
   def print_info(tea)
 
