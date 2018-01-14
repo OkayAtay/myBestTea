@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/myBestTea'
+require_relative '../lib/my_best_tea/cli.rb'
 
-myBestTea::CLI.new.call
+CLI.new.call

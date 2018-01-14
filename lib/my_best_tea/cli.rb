@@ -19,7 +19,7 @@
 # What type of tea would you like to learn more about?
 
 
-def myBestTea::CLI
+class CLI
 
   def call
     puts "Welcome to My Best Tea!"
@@ -49,13 +49,14 @@ def myBestTea::CLI
       puts "Would you like to learn more about #{input} tea? Type Y or N."
       puts ""
       input = gets.strip
-      if second_input == "y"
-        tea_types(second_input)
-      else
+      if input == "y"
+        tea_types(input)
+      elsif input == "n"
         start
+      elsif input == "exit"
       end
     end
-     puts "Thanks for using My Best Tea -- Happy Sipping!"
+    puts "Thanks for using My Best Tea -- Happy Sipping!"
   end
 
 end
