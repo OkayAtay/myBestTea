@@ -1,44 +1,51 @@
 class CLI
 
+  attr_accessor :input
+
   def call
+    puts ""
     puts "Welcome to My Best Tea!"
+    puts ""
     start
   end
 
-  def list_tea
-    @@all.Tea do each |tea|
-      puts tea.name
-    end
-  end
-
-  def print_tea(tea)
-    find_by_name(tea)
-    puts "more information about tea"
-  end
-
-  def tea_types(tea)
-    puts "even more info about specific tea"
-  end
-
   def start
-    input = nil
     list_tea
+    print_tea(input)
+    goodbye
+  end
+
+  def list_tea
+    #@@all.Tea do each |tea|
+    #  puts "tea.name"
+    #end
+    puts ""
+    puts "Here are delicious teas that can be found around the world:"
+    puts ""
+    puts "Tea 1"
+    puts "Tea 2"
+    puts "Tea 3"
+    puts ""
+  end
+
+  def print_tea(input)
+    puts ""
+    puts "Please choose a tea to explore or type exit to leave the program"
+    puts ""
     while input != "exit"
-      puts "Please choose a tea to explore. Type exit to leave the program"
-      input = gets.strip
-      print_tea(input)
-      puts ""
-      puts "Would you like to learn more about #{input} tea? Type Y or N."
-      puts ""
-      input = gets.strip
-      if input == "y"
-        tea_types(input)
-        puts "Would you like to learn more about a new type of tea?"
-      elsif input == "n"
-        start
-      elsif input == "exit"
+      input = gets.strip.downcase
+      case input
+        when "tea 1"
+          puts "more information about tea 1"
+        when "tea 2"
+          puts "more information on tea 2"
+        when "tea 3"
+          puts "more information on tea 3"
       end
     end
+  end
+
+  def goodbye
     puts "Thanks for using My Best Tea -- Happy Sipping!"
   end
 
