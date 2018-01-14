@@ -55,7 +55,7 @@ def myBestTea::CLI
         start
       end
     end
-     puts "Thanks for using My BestTea -- Happy Sipping!"
+     puts "Thanks for using My Best Tea -- Happy Sipping!"
   end
 
 end
