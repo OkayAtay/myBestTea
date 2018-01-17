@@ -1,5 +1,5 @@
 require_relative "../my_best_tea/tea.rb"
-require_relative "../lib/scraper.rb"
+require_relative "../my_best_tea/scraper.rb"
 
 class CLI
 
@@ -14,7 +14,7 @@ class CLI
 
   def start
     list_tea
-    print_tea(input)
+    print_tea
     goodbye
   end
 
@@ -25,16 +25,15 @@ class CLI
     puts ""
     puts "Here are delicious teas that can be found around the world:"
     puts ""
-    Tea.all.each do |tea|
-      puts "#{tea.name}"
-    end
+    Tea.print_all
     puts ""
   end
 
-  def print_tea(input)
+  def print_tea
     puts ""
     puts "Please choose a tea to explore or type exit to leave the program"
     puts ""
+    print_info(input)
     while input != "exit"
       input = gets.strip.downcase
       case input
