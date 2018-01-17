@@ -1,3 +1,6 @@
+require_relative "../my_best_tea/tea.rb"
+require_relative "../lib/scraper.rb"
+
 class CLI
 
   attr_accessor :input
@@ -22,9 +25,9 @@ class CLI
     puts ""
     puts "Here are delicious teas that can be found around the world:"
     puts ""
-    puts "Tea 1"
-    puts "Tea 2"
-    puts "Tea 3"
+    Tea.all.each do |tea|
+      puts "#{tea.name}"
+    end
     puts ""
   end
 
