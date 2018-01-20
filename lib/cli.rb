@@ -1,5 +1,6 @@
 require_relative "../my_best_tea/tea.rb"
 require_relative "../my_best_tea/scraper.rb"
+require 'nokogiri'
 
 class CLI
 
@@ -33,7 +34,6 @@ class CLI
     puts ""
     puts "Please choose a tea to explore or type exit to leave the program"
     puts ""
-    print_info(input)
     while input != "exit"
       input = gets.strip.downcase
       case input

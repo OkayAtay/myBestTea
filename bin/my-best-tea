@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require '../lib/my_best_tea/cli.rb'
-require '../lib/my_best_tea/scraper.rb'
-require '../lib/my_best_tea/tea.rb'
+require_relative '../lib/my_best_tea/cli.rb'
 
 CLI.new.call
